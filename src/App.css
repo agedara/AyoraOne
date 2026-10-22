@@ -1,0 +1,136 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 24px 22px;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 8% 100%, rgba(240, 120, 40, 0.14), transparent 42%),
+    radial-gradient(ellipse at 100% 0%, rgba(112, 112, 112, 0.12), transparent 38%),
+    var(--paper);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.swirl {
+  position: absolute;
+  width: min(72vw, 640px);
+  height: auto;
+  opacity: 0.16;
+}
+
+.swirl-a {
+  top: -18%;
+  right: -12%;
+  animation: drift 90s linear infinite;
+}
+
+.swirl-b {
+  bottom: -22%;
+  left: -16%;
+  width: min(64vw, 520px);
+  opacity: 0.12;
+  animation: drift 110s linear infinite reverse;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  width: min(100%, 40rem);
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 24px 0 12px;
+}
+
+.logo {
+  width: min(100%, 34rem);
+  height: auto;
+  margin: 0 auto 1.75rem;
+  display: block;
+}
+
+.kicker {
+  margin: 0 0 0.85rem;
+  color: var(--brown);
+  font-size: 0.78rem;
+  font-weight: 620;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.kicker::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin: 0.9rem auto 0;
+  border-radius: 999px;
+  background: var(--orange);
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 560;
+  font-optical-sizing: auto;
+  font-size: clamp(2.5rem, 6vw, 4.15rem);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  color: var(--ink);
+}
+
+.lede {
+  margin: 1.15rem auto 0;
+  max-width: 36rem;
+  color: var(--ink-soft);
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  justify-content: center;
+  width: min(100%, 40rem);
+  margin-top: 2.5rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 20px 18px 16px;
+  }
+
+  .swirl {
+    opacity: 0.1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swirl-a,
+  .swirl-b {
+    animation: none;
+  }
+}
