@@ -252,39 +252,6 @@ function IndustryIcon({ name }: { name: (typeof industries)[number]["icon"] }) {
   );
 }
 
-function SwirlMark({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 200 200"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <g
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        transform="translate(100 100)"
-      >
-        <path d="M0-78 C34-74 62-52 70-22" strokeWidth="9" />
-        <path d="M18-72 C48-58 68-30 66 2" strokeWidth="8" />
-        <path d="M38-58 C62-38 70-8 58 20" strokeWidth="8.5" />
-        <path d="M56-36 C70-12 66 18 44 40" strokeWidth="7.5" />
-        <path d="M66-8 C72 18 56 44 28 56" strokeWidth="8" />
-        <path d="M64 20 C60 46 34 64 4 66" strokeWidth="7" />
-        <path d="M48 42 C34 62 8 72 -20 64" strokeWidth="8" />
-        <path d="M22 58 C4 72 -24 70 -44 52" strokeWidth="7.5" />
-        <path d="M-4 64 C-28 68 -52 52 -58 26" strokeWidth="8" />
-        <path d="M-30 54 C-52 44 -64 18 -58 -8" strokeWidth="7" />
-        <path d="M-50 32 C-66 14 -64 -14 -48 -36" strokeWidth="8.5" />
-        <path d="M-60 4 C-68 -18 -56 -44 -32 -56" strokeWidth="7.5" />
-        <path d="M-56 -24 C-54 -48 -30 -66 -2 -68" strokeWidth="8" />
-        <path d="M-38 -48 C-22 -66 6 -72 28 -62" strokeWidth="7" />
-      </g>
-    </svg>
-  );
-}
-
 function OfferIcon({
   name,
 }: {
@@ -425,11 +392,6 @@ export default function App() {
       className="page relative min-h-dvh overflow-x-clip bg-[radial-gradient(ellipse_50%_36%_at_100%_0%,rgba(8,48,112,0.05),transparent_55%),radial-gradient(ellipse_32%_24%_at_0%_8%,rgba(8,48,112,0.03),transparent_50%),var(--color-white)]"
       id="top"
     >
-      <div className="watermark" aria-hidden="true">
-        <SwirlMark className="watermark-mark watermark-a" />
-        <SwirlMark className="watermark-mark watermark-b" />
-        <SwirlMark className="watermark-mark watermark-c" />
-      </div>
       <a
         className="absolute left-4 top-[-48px] z-[3] rounded-lg bg-white px-3 py-2 text-ink focus:top-3"
         href="#main"
