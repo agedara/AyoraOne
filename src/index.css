@@ -12,7 +12,7 @@
   --color-body: #181820;
   --color-grey: #6b7380;
   --color-brown: #486890;
-  --color-orange: #e06810;
+  --color-orange: #c09828;
   --color-navy: #083070;
   --color-line: rgba(8, 48, 112, 0.11);
   --color-line-strong: rgba(8, 48, 112, 0.2);
@@ -38,7 +38,7 @@
   --body: #181820;
   --grey: #6b7380;
   --brown: #486890;
-  --orange: #e06810;
+  --orange: #c09828;
   --navy: #083070;
   --line: rgba(8, 48, 112, 0.11);
   --line-strong: rgba(8, 48, 112, 0.2);
@@ -136,12 +136,12 @@
   }
 
   .btn-primary {
-    @apply border-[rgba(192,88,12,0.4)] bg-orange text-[#fffaf6];
+    @apply border-[rgba(160,120,30,0.4)] bg-orange text-[#fffdf6];
     box-shadow: var(--shadow-btn-primary);
   }
 
   .btn-primary:hover {
-    @apply bg-[#c8580c];
+    @apply bg-[#a88620];
     box-shadow: var(--shadow-btn-primary-hover);
   }
 

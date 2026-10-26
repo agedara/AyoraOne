@@ -500,22 +500,6 @@ export default function App() {
               </a>
             </aside>
           </div>
-          <p className="mt-10 mb-0 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-5 text-[0.84rem] font-medium tracking-[-0.01em] text-ink-soft max-[800px]:mt-8">
-            <span>Salisbury, QLD 4107</span>
-            <span className="opacity-35" aria-hidden="true">
-              ·
-            </span>
-            <span>ABN 36 404 700 508</span>
-            <span className="opacity-35" aria-hidden="true">
-              ·
-            </span>
-            <a
-              className="text-ink no-underline transition-colors duration-200 ease-[var(--ease-brand)] hover:text-brown"
-              href="mailto:enquire@ayoraone.com.au"
-            >
-              enquire@ayoraone.com.au
-            </a>
-          </p>
         </section>
 
         <section className="scroll-mt-24" id="work">
