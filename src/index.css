@@ -102,6 +102,63 @@
 }
 
 @layer components {
+  .page > :not(.watermark) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .watermark {
+    @apply pointer-events-none absolute inset-0 z-0 overflow-hidden;
+  }
+
+  .watermark-mark {
+    @apply absolute;
+    stroke: var(--color-navy);
+  }
+
+  .watermark-a {
+    top: -4rem;
+    right: -8rem;
+    width: min(42vw, 28rem);
+    opacity: 0.055;
+  }
+
+  .watermark-b {
+    top: 42%;
+    left: -10rem;
+    width: min(48vw, 32rem);
+    opacity: 0.04;
+    stroke: var(--color-orange);
+    transform: rotate(28deg);
+  }
+
+  .watermark-c {
+    right: -6rem;
+    bottom: 8%;
+    width: min(36vw, 24rem);
+    opacity: 0.045;
+    transform: rotate(-18deg);
+  }
+
+  @media (max-width: 800px) {
+    .watermark-a {
+      top: -2rem;
+      right: -5rem;
+      width: 70vw;
+      opacity: 0.045;
+    }
+
+    .watermark-b {
+      left: -7rem;
+      width: 78vw;
+      opacity: 0.03;
+    }
+
+    .watermark-c {
+      display: none;
+    }
+  }
+
   .shell {
     @apply mx-auto w-[min(1080px,calc(100%-72px))] max-[800px]:w-[min(1080px,calc(100%-40px))];
   }
