@@ -5,7 +5,7 @@ import sharp from "sharp";
 const root = path.resolve(import.meta.dirname, "..");
 const source = path.join(root, "brand", "logo-source.png");
 const publicDir = path.join(root, "public");
-const paper = { r: 246, g: 241, b: 235, alpha: 1 };
+const paper = { r: 245, g: 247, b: 250, alpha: 1 };
 
 await mkdir(publicDir, { recursive: true });
 
